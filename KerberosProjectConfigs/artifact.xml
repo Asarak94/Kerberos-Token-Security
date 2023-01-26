@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="kerberosSampleProxy" groupId="com.example.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/kerberosSampleProxy.xml</file>
+    </artifact>
+    <artifact name="kerberosSampleProxy_proxy_metadata" groupId="com.example.proxy-service.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/kerberosSampleProxy_proxy_metadata.yaml</file>
+    </artifact>
+    <artifact name="backendProxy" groupId="com.example.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/backendProxy.xml</file>
+    </artifact>
+    <artifact name="backendProxy_proxy_metadata" groupId="com.example.proxy-service.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/backendProxy_proxy_metadata.yaml</file>
+    </artifact>
+</artifacts>

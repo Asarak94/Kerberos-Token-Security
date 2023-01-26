@@ -1,0 +1,10 @@
+---
+key: "kerberosSampleProxy_proxy-1.0.0"
+name : "kerberosSampleProxy"
+displayName : "kerberosSampleProxy"
+description: "Sample Proxy Service"
+version: "1.0.0"
+serviceUrl: "https://{MI_HOST}:{MI_PORT}/services/kerberosSampleProxy"
+definitionType: "WSDL1"
+securityType: "BASIC"
+mutualSSLEnabled: false

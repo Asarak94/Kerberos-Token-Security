@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="backendProxy" startOnLoad="true" transports="http https" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <inSequence>
+            <payloadFactory media-type="xml">
+                <format>
+                    <soapenv:Envelope xmlns:ser="http://services.samples" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://services.samples/xsd">
+                        <soapenv:Header>
+                            <ser:authenticationRequest>
+                                <userName xmlns="">$1</userName>
+                                <password xmlns="">$2</password>
+                            </ser:authenticationRequest>
+                        </soapenv:Header>
+                        <soapenv:Body>
+                            <ser:getQuote>
+                                <ser:request>
+                                    <xsd:symbol>$3</xsd:symbol>
+                                </ser:request>
+                            </ser:getQuote>
+                        </soapenv:Body>
+                    </soapenv:Envelope>
+                </format>
+                <args>
+                    <arg value="asara"/>
+                    <arg value="password123"/>
+                    <arg value="helloWorld"/>
+                </args>
+            </payloadFactory>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </target>
+</proxy>
